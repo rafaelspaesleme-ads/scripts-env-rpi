@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Script para:
 # PostgreSQL + Docker: RPI
 # Execute esse script como root
