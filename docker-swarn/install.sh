@@ -1,7 +1,7 @@
 
 #!/bin/sh
 # Script para:
-# MySQL + Docker: instalação do docker swarn em um ambiente rapsberry pi.
+# Docker: instalação do docker swarn em um ambiente rapsberry pi.
 # Execute esse script como root
 # Create per Rafael Paes Leme
 
