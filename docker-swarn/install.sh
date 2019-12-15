@@ -27,5 +27,7 @@ echo 'Digite o nome da imagem docker da sua aplicação: '
 read image_docker
 echo 'Digite a versão da sua imagem, da qual deseja utilizar: '
 read version_image_docker
+echo 'Digite o número de replicas: '
+read num_replicas
 
-docker service create --name $name_cluster --publish $port_ext:$port_int/tcp --constraint node.role==manager --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock $user_docker/$image_docker:$version_image_docker
+docker service create --name $name_cluster --publish $port_ext:$port_int/tcp --constraint node.role==manager --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock --replicas $num_replicas $user_docker/$image_docker:$version_image_docker
