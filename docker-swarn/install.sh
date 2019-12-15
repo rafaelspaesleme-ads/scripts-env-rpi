@@ -14,7 +14,7 @@ docker swarm init --advertise-addr $ip_principal
 # Verificar os nodes criados em meu cluster
 docker node ls
 
-# levantando meu container em forma de um serviço no docekr swarn
+# levantando meu container em forma de um serviço no docekr swarn e criando balanceamento de carga
 echo 'Digite um nome para meu cluster: '
 read name_cluster
 echo 'Digite a porta externa do serviço: '
