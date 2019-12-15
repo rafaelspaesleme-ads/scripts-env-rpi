@@ -1,0 +1,18 @@
+--- 
+services: 
+  database: 
+    build: "."
+    container_name: $NAME_CONTAINER
+    env_file: .env
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=$PASS_POSTGRES
+      - POSTGRES_DB=$NAME_DB
+    ports: 
+      - "$PORT_EXT:5432"
+    restart: always
+    volumes: 
+      - "./db_data:/var/lib/postgresql"
+version: "$VERSION_COMPOSE"
+volumes: 
+  db_data: ~
